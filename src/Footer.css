@@ -1,0 +1,106 @@
+
+footer {
+    width: 100%;
+    height: auto;
+    background-color: #59955C;
+    padding: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1200px;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .footer-block {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 180px;
+  }
+  
+  .footer-block h2 {
+    font-size: 16px;
+    color: #F8FFF8;
+    margin-bottom: 10px;
+  }
+  
+  .footer-block ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footer-block ul li {
+    font-size: 14px;
+  }
+  
+  .footer-block ul li a {
+    color: #F8FFF8;
+    text-decoration: none;
+    transition: color 0.5s;
+  }
+  
+  .footer-block ul li a:hover {
+    color: #7ED957;
+  }
+  
+  .footer-block.center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .social-icons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .social-icons ion-icon {
+    font-size: 24px;
+    color: #F8FFF8;
+  }
+  
+  .modal_container { 
+    
+    background-color: rgba(201, 201, 201, 0.63);
+    top: 0;
+    left: 0;
+    height: 100vw;
+    width: 100vw;
+    border: 0px;
+  }
+  
+  .modal_container .card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40vw;
+    padding: 20px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    border-radius: 30px;
+    background: #f8fff8;
+    box-shadow: 15px 15px 30px #bebebe,
+               -15px -15px 30px #d1d1d1;
+  }
+  
+  dialog {
+    justify-content: center;
+    align-items: center;
+    
+  }
+  
+  dialog[open] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
