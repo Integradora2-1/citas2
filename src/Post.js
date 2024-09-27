@@ -53,21 +53,23 @@ function Post({res}) {
 
   return (
     <div id="cont-usr-anim">
-      <h1 style={{ textAlign: 'center' }}>¡Bienvenido {res.nombre_usuario}!</h1>
+      <h1 className='h1s'style={{ textAlign: 'center' }}>¡Bienvenido {res.nombre_usuario}!</h1>
 
-      <div id="div_pets">
-        <h1>Tus mascotas</h1>
+      <div id="div_pets" className='pets'>
+        <h1 >Tus mascotas</h1>
         {animals.length > 0 ? (
           animals.map((animal) => (
+            <div class="card" id='card'>
+              <h2 className='h2s'>{animal.nombre_animal}</h2>
             <div key={animal.id_animal} className="innercard">
-              <h2>{animal.nombre_animal}</h2>
+              
               <div className="primarydata">
                 <div className="dataleft">
-                  <h3>Animal:</h3>
-                  <h3>Raza:</h3>
-                  <h3>Edad:</h3>
-                  <h3>Peso:</h3>
-                  <h3>Sexo:</h3>
+                  <h3 className='h3s'>Animal:</h3>
+                  <h3 className='h3s'>Raza:</h3>
+                  <h3 className='h3s'>Edad:</h3>
+                  <h3 className='h3s'>Peso:</h3>
+                  <h3 className='h3s'>Sexo:</h3>
                 </div>
                 <div className="dataright">
                   <p>{animal.especie_a}</p>
@@ -90,16 +92,18 @@ function Post({res}) {
                 </button>
               </div>
             </div>
+            </div>
           ))
         ) : (
           <p>Cargando mascotas...</p>
         )}
 
-        <h1>Tus citas</h1>
+        <h1 className='h1s'>Tus citas</h1>
         {citas.length > 0 ? (
           citas.map((cita) => {
             const animal = animals.find((an) => an.id_animal === cita.fk_animal);
             return (
+              <div class="card" id='citas_card'>
               <div key={cita.id_cita} className="innercard">
                 <div className="primarydata" style={{ flexDirection: 'column', height: 'auto' }}>
                   <h3 style={{ color: '#004E71' }}>Mascota:</h3>
@@ -113,7 +117,7 @@ function Post({res}) {
                   <h3 style={{ color: '#004E71' }}>Motivo:</h3>
                   <p>{cita.motivo_cita}</p>
                 </div>
-              </div>
+              </div></div>
             );
           })
         ) : (
