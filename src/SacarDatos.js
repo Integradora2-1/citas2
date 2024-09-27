@@ -1,14 +1,6 @@
+import React, { useEffect, useState } from 'react';
 
-/*import React, {useState} from 'react';
-import { Navbar, Nav, Button, Form, FormControl } from 'react-bootstrap';*/
-
-import './Post.css'; 
-import React from 'react';
-import { useEffect, useState } from 'react';
-
-
-//Sacar los datos para llenar las citas y animales
-function Post({res}) {
+function Datostabla({ res }) {
   const [animals, setAnimals] = useState([]);
   const [citas, setCitas] = useState([]);
 
@@ -124,5 +116,4 @@ function Post({res}) {
   );
 }
 
-
-export default Post;
+export default Datostabla;

@@ -25,11 +25,11 @@ function App() {
   },[])
   return (
     <div>
-      <header >
+      
         <Header />
-      </header>
+      
       <body>
-        <Post></Post>
+        <Post res={{id_usuario: 2, nombre_usuario: 'jesus1', contraseña: '$2a$05$Ye5YcJEE2pT/QOMnLycRlu2LT1E3IbD971luFpAFQIhKb2QFYAcwi', telefono: null, correo: 'jjimenechuyin@gmail.com'}}></Post>
         <h1>lala</h1>
         <ul>
           <li key={usr.id_usuario}>
@@ -41,5 +41,6 @@ function App() {
     </div>
   );
 }
+
 
 export default App;
