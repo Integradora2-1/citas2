@@ -8,17 +8,17 @@ function Footer() {
             <div className="footer-block">
                 <h2>Acerca de</h2>
                 <ul>
-                    <li><a href="#">Descuentos</a></li>
-                    <li><a href="#">Vacantes</a></li>
-                    <li><a href="#">Horarios</a></li>
+                    <li><a href="Descuentos">Descuentos</a></li>
+                    <li><a href="Vacantes">Vacantes</a></li>
+                    <li><a href="Horario">Horarios</a></li>
                 </ul>
             </div>
             <div className="footer-block">
                 <h2>Ayuda</h2>
                 <ul>
-                    <li><a href="#">Preguntas frecuentes</a></li>
-                    <li><a href="#">Atención al cliente</a></li>
-                    <li><a href="#">Contáctanos</a></li>
+                    <li><a href="Preguntas">Preguntas frecuentes</a></li>
+                    <li><a href="Atencion al cliente">Atención al cliente</a></li>
+                    <li><a href="Contactanos">Contáctanos</a></li>
                 </ul>
             </div>
             <div className="footer-block center">
@@ -32,9 +32,9 @@ function Footer() {
             <div className="footer-block">
                 <h2>Asuntos legales</h2>
                 <ul>
-                    <li><a href="#">Términos de servicio</a></li>
-                    <li><a href="#">Protección de datos</a></li>
-                    <li><a href="#">Cookies</a></li>
+                    <li><a href="Terminos de servicio">Términos de servicio</a></li>
+                    <li><a href="Proteccion de datos">Protección de datos</a></li>
+                    <li><a href="Cookies">Cookies</a></li>
                 </ul>
             </div>
             <div className="footer-block">

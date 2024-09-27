@@ -1,7 +1,8 @@
 import './App.css';
 import Footer from './Footer'; 
 import { useEffect, useState } from 'react';
-import Header from './Post' ;
+import Header from './Header';
+import Post from './Post';
 
 function App() {
   const [usr,setUsr]=useState([]);
@@ -28,6 +29,7 @@ function App() {
         <Header />
       </header>
       <body>
+        <Post></Post>
         <h1>lala</h1>
         <ul>
           <li key={usr.id_usuario}>
