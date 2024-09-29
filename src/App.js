@@ -23,19 +23,14 @@ function App() {
     getUsr();
     //console.log(usr);
   },[])
+  //console.log(usr);
   return (
     <div>
       
         <Header />
       
       <body>
-        <Post res={{id_usuario: 2, nombre_usuario: 'jesus1', contraseña: '$2a$05$Ye5YcJEE2pT/QOMnLycRlu2LT1E3IbD971luFpAFQIhKb2QFYAcwi', telefono: null, correo: 'jjimenechuyin@gmail.com'}}></Post>
-        <h1>lala</h1>
-        <ul>
-          <li key={usr.id_usuario}>
-            {usr.nombre_usuario} - {usr.correo}
-          </li>
-        </ul>
+        <Post res={usr}></Post>
       </body>
       <Footer />
     </div>
