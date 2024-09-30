@@ -1,6 +1,6 @@
 import React from 'react';
 import './Footer.css';
-import logoV from './Vet_2_Care.png';
+
 function Footer() {
     return (
         <footer>
@@ -22,7 +22,7 @@ function Footer() {
                 </ul>
             </div>
             <div className="footer-block center">
-                <img src={logoV} alt="Vet 2 Care Logo" style={{ width: '80px', height: 'auto' }} />
+                
                 <div className="social-icons">
                     <ion-icon name="logo-youtube"></ion-icon>
                     <ion-icon name="logo-facebook"></ion-icon>

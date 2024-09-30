@@ -18,14 +18,14 @@ function Post(res) {
     const fetchData = async () => {
       //console.log(usr);
       if (usr) {
-        fetch("http://localhost:4500/api/getPets?email="+usr)
+        fetch("http://localhost:4501/api/getPets?email="+usr)
         .then((response)=>response.json())
         .then((data)=>{
           console.log(data);
           setAnimals(data);
         })
 
-        fetch("http://localhost:4500/api/getCitas?id="+res.res.id_usuario)
+        fetch("http://localhost:4501/api/getCitas?id="+res.res.id_usuario)
         .then((ans)=>ans.json())
         .then((answer)=>{
           console.log(answer);

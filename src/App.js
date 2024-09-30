@@ -3,11 +3,14 @@ import Footer from './Footer';
 import { useEffect, useState } from 'react';
 import Header from './Header';
 import Post from './Post';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+
 
 function App() {
   const [usr,setUsr]=useState([]);
   function getUsr(){
-    fetch("http://localhost:4500/api/getUsrData?nombre=hola@hola.com")
+    fetch("http://localhost:4501/api/getUsrData?nombre=hola@hola.com")
     .then((response)=> response.json())
     .then((data)=>{
       setUsr(data);
