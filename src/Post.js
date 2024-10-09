@@ -8,43 +8,29 @@ import { useEffect, useState } from 'react';
 
 
 //Sacar los datos para llenar las citas y animales
-function Post({res}) {
+function Post(res) {
   const [animals, setAnimals] = useState([]);
   const [citas, setCitas] = useState([]);
+  const usr= res.res.correo;
+  //const usuario=JSON.parse(usr);
 
   useEffect(() => {
     const fetchData = async () => {
-      if (res.correo) {
-        try {
-          const an = await fetch('http://localhost:4500/api/getPets', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ email: res.correo }),
-          });
+      //console.log(usr);
+      if (usr) {
+        fetch("http://localhost:4501/api/getPets?email="+usr)
+        .then((response)=>response.json())
+        .then((data)=>{
+          console.log(data);
+          setAnimals(data);
+        })
 
-          if (!an.ok) {
-            console.error('No se hizo la consulta');
-            return;
-          }
-
-          const animalsData = await an.json();
-          setAnimals(animalsData);
-
-          const cit = await fetch('http://localhost:4500/api/getCitas', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ id: res.id_usuario }),
-          });
-
-          const citasData = await cit.json();
-          setCitas(citasData);
-        } catch (error) {
-          console.error('Error fetching data:', error);
-        }
+        fetch("http://localhost:4501/api/getCitas?id="+res.res.id_usuario)
+        .then((ans)=>ans.json())
+        .then((answer)=>{
+          console.log(answer);
+          setCitas(answer);
+        })
       }
     };
 
@@ -53,7 +39,7 @@ function Post({res}) {
 
   return (
     <div id="cont-usr-anim">
-      <h1 className='h1s'style={{ textAlign: 'center' }}>¡Bienvenido {res.nombre_usuario}!</h1>
+      <h1 className='h1s'style={{ textAlign: 'center' }}>¡Bienvenido {res.res.nombre_usuario}!</h1>
 
       <div id="div_pets" className='pets'>
         <h1 >Tus mascotas</h1>
